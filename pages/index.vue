@@ -89,17 +89,7 @@
     name: "index",
     data: () => ({
 
-    }),
-    computed: {
-
-    },
-    methods: {
-
-    },
-    created() {
-    },
-    mounted() {
-    }
+    })
   }
 
 </script>
