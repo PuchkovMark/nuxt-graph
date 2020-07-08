@@ -1,6 +1,6 @@
 # nuxt-graph
 
-> My well-made Nuxt.js project
+> Моя выпускная квалификационная работа
 
 ## Build Setup
 
