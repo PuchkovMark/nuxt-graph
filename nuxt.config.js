@@ -14,7 +14,13 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css', integrity: 'sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq', crossorigin: 'anonymous' }
+    ],
+    script: [
+      { src: 'https://cdn.plot.ly/plotly-latest.min.js' },
+      { type: 'module', src: 'https://unpkg.com/@navsnpm/katex-expression/dist/katex-expression/katex-expression.esm.js'},
+      { nomodule: '', src: 'https://unpkg.com/@navsnpm/katex-expression/dist/katex-expression/katex-expression.js'}
     ]
   },
   /*
@@ -43,6 +49,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/pwa',
   ],
   /*
   ** Axios module configuration
@@ -57,7 +64,7 @@ module.exports = {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,

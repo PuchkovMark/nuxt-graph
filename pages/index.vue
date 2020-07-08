@@ -1,92 +1,111 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
+  <v-layout>
+
+    <v-row danse>
+      <v-col cols="12">
+        <v-card style="display: flex;align-items: center;justify-content: center;flex-direction: column;">
+          <v-card-title>
+            Обучающая программа на тему "Построение графиков функций"
+          </v-card-title>
+          <img src="/hire.svg" width="20%" style="min-width: 150px;">
+          <v-card-text style="color: #000000; text-align: center">
+            Выберите карточку, чтобы начать задание
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="4">
+        <v-card class="mx-auto" max-width="344" to="/first-example">
+          <v-img height="200px" style="display: flex;align-items: center;justify-content: center;">
+            <katex-expression
+              expression='y = \dfrac{(x+1)(x+8)}{x}'
+              katex-options='{ "displayMode": true , "throwOnError": true }'>
+            </katex-expression>
+          </v-img>
+
+          <v-card-title>
+            Пример №1
+          </v-card-title>
+
+          <v-card-subtitle>
+            Исследовать функцию средствами дифференциального исчисления и построить ее график.
+          </v-card-subtitle>
+
+          <v-card-actions>
+          </v-card-actions>
+
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="4">
+        <v-card class="mx-auto" max-width="344" to="/second-example">
+          <v-img height="200px" style="display: flex;align-items: center;justify-content: center;">
+            <katex-expression
+              expression='y = \dfrac{1}{9}x(x-4)^3'
+              katex-options='{ "displayMode": true , "throwOnError": true }'>
+            </katex-expression>
+          </v-img>
+
+          <v-card-title>
+            Пример №2
+          </v-card-title>
+
+          <v-card-subtitle>
+            Исследовать функцию средствами дифференциального исчисления и построить ее график.
+          </v-card-subtitle>
+
+          <v-card-actions>
+          </v-card-actions>
+
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="4">
+        <v-card class="mx-auto" max-width="344" to="/third-example">
+          <v-img height="200px" style="display: flex;align-items: center;justify-content: center;">
+            <katex-expression
+              expression='y = (x-1)(x^2 - 5x + 4)'
+              katex-options='{ "displayMode": true , "throwOnError": true }'>
+            </katex-expression>
+          </v-img>
+
+          <v-card-title>
+            Пример №3
+          </v-card-title>
+
+          <v-card-subtitle>
+            Исследовать функцию средствами дифференциального исчисления и построить ее график.
+          </v-card-subtitle>
+
+          <v-card-actions>
+          </v-card-actions>
+
+        </v-card>
+      </v-col>
+    </v-row>
+
   </v-layout>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+  export default {
+    name: "index",
+    data: () => ({
 
-export default {
-  components: {
-    Logo,
-    VuetifyLogo
+    }),
+    computed: {
+
+    },
+    methods: {
+
+    },
+    created() {
+    },
+    mounted() {
+    }
   }
-}
+
 </script>
+
+<style scoped>
+  span {
+    margin: 10px;
+  }
+</style>
